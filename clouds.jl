@@ -6,6 +6,8 @@ texts = "EconomistAs é um grupo de pesquisa da Faculdade de Economia e Administ
 
 texts = split(texts)
 
+weights = rand(length(texts)) .^ 2 .* 100 .+ 30
+
 wc = wordcloud(texts, weights)
 
 generate(wc)
